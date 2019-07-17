@@ -1,12 +1,17 @@
 import React, { useState, useEffect } from "react";
-import "./App.css";
 import axios from "axios";
 import Card from "./components/Card";
 import Header from "./components/Header";
+import DateDrop from "./components/DateDrop";
 import "./App.css";
 
 function App() {
   const [data, setData] = useState("");
+  const [date, setDate] = useState("");
+
+  const changeDate = event => {
+    setDate(event.EventTarget.value);
+  };
 
   useEffect(() => {
     const axios = require("axios");
@@ -17,6 +22,9 @@ function App() {
       .then(response => {
         // console.log("nasa api", response.data);
         setData(response.data); //all data
+      })
+      .catch(err => {
+        console.log("Error", err);
       });
   }, []);
 
@@ -27,6 +35,7 @@ function App() {
   return (
     <div className="App">
       <Header />
+      <DateDrop date={changeDate} />
       <Card data={data} />
     </div>
   );
