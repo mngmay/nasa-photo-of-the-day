@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./App.css";
 import axios from "axios";
 import Card from "./components/Card";
-
+import Header from "./components/Header";
 import "./App.css";
 
 function App() {
@@ -26,6 +26,7 @@ function App() {
 
   return (
     <div className="App">
+      <Header />
       <Card data={data} />
     </div>
   );
