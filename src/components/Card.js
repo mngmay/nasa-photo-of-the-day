@@ -15,7 +15,7 @@ function Card(props) {
     <div className="card">
       <h2 className="card-title">{data.title}</h2>
       {media()}
-      <p className="date">Date: {data.date}</p>
+      <p className="card-date">Date: {data.date}</p>
       <p className="description">{data.explanation}</p>
     </div>
   );

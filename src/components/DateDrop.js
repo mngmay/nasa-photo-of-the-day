@@ -5,7 +5,12 @@ const DateDrop = ({ changeDate }) => {
     <div className="date">
       <form action="">
         <label>Select a date: </label>
-        <input type="date" name="date" onChange={changeDate} />
+        <input
+          type="date"
+          name="date"
+          onChange={changeDate}
+          className="cal-date"
+        />
       </form>
     </div>
   );

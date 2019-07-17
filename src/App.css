@@ -35,10 +35,9 @@
 .card {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   margin: 0 auto;
-  width: 600px;
+  width: 500px;
 }
 
 .header {
@@ -55,4 +54,27 @@
 .header .slogan {
   padding: 10px;
   padding-top: 0;
+}
+
+.card-date {
+  background-color: #919191;
+  width: 100%;
+  color: white;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+}
+.description {
+  margin-top: -5px;
+}
+
+.cal-date {
+  text-align: center;
+}
+
+input[type="date"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  display: none;
 }

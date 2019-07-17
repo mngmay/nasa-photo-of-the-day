@@ -39,6 +39,7 @@ function App() {
     <div className="App">
       <Header />
       <DateDrop changeDate={changeDate} />
+      {/* {the left side variable is what is passed to DateDrop to connect} */}
       <Card data={data} />
     </div>
   );
