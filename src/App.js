@@ -11,7 +11,7 @@ function App() {
 
   const changeDate = event => {
     setDate(event.target.value);
-    console.log(event.target);
+    // console.log(event.target);
   };
 
   useEffect(() => {
@@ -38,7 +38,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <DateDrop date={changeDate} />
+      <DateDrop changeDate={changeDate} />
       <Card data={data} />
     </div>
   );
