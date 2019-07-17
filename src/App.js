@@ -6,7 +6,6 @@ import Card from "./components/Card";
 import "./App.css";
 
 function App() {
-  const [url, setUrl] = useState("");
   const [data, setData] = useState("");
 
   useEffect(() => {
@@ -18,21 +17,16 @@ function App() {
       .then(response => {
         // console.log("nasa api", response.data);
         setData(response.data); //all data
-        setUrl(response.data.url); //photo
       });
   }, []);
 
-  if (!url) {
+  if (!data.url) {
     return <div className="loading">Loading...</div>;
   }
 
   return (
     <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun 🚀!
-      </p>
-      <Card url={url} data={data} />
+      <Card data={data} />
     </div>
   );
 }
