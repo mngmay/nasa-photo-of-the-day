@@ -7,26 +7,29 @@ import "./App.css";
 
 function App() {
   const [data, setData] = useState("");
-  const [date, setDate] = useState("");
+  const [date, setDate] = useState("2019-07-17");
 
   const changeDate = event => {
-    setDate(event.EventTarget.value);
+    setDate(event.target.value);
+    console.log(event.target);
   };
 
   useEffect(() => {
-    const axios = require("axios");
-    axios
-      .get(
-        "https://api.nasa.gov/planetary/apod?api_key=1Xutd7S447q1JRw1wsZ4D7OLzT0RGlrvd9koaDSQ"
-      )
-      .then(response => {
-        // console.log("nasa api", response.data);
-        setData(response.data); //all data
-      })
-      .catch(err => {
-        console.log("Error", err);
-      });
-  }, []);
+    const fetchData = () => {
+      axios
+        .get(
+          `https://api.nasa.gov/planetary/apod?api_key=1Xutd7S447q1JRw1wsZ4D7OLzT0RGlrvd9koaDSQ&date=${date}`
+        )
+        .then(response => {
+          // console.log("nasa api", response.data.date);
+          setData(response.data); //all data
+        })
+        .catch(err => {
+          console.log("Error", err);
+        });
+    };
+    fetchData();
+  }, [date]);
 
   if (!data.url) {
     return <div className="loading">Loading...</div>;

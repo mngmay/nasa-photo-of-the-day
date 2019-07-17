@@ -1,21 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 function Card(props) {
   const { data } = props;
   const media = () => {
     if (data.media_type === "image") {
-      return (
-        <img src={data.url} alt="photo of the day" width="500" height="300" />
-      );
+      return <img src={data.url} alt="apod" width="500" height="300" />;
     } else if (data.media_type === "video") {
-      return (
-        <iframe
-          src={data.url}
-          width="500"
-          height="300"
-          title="video of the day"
-        />
-      );
+      return <iframe src={data.url} width="500" height="300" title="apod" />;
     }
   };
   //   console.log(data);

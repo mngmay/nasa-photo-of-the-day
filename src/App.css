@@ -31,3 +31,28 @@
     transform: rotate(360deg);
   }
 }
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 600px;
+}
+
+.header {
+  background: #919191;
+  color: white;
+}
+
+.header h1 {
+  font-size: 3rem;
+  padding: 10px;
+  padding-bottom: 0;
+}
+
+.header .slogan {
+  padding: 10px;
+  padding-top: 0;
+}
