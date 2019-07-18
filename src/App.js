@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import styled from "styled-components";
 import axios from "axios";
 import Card from "./components/Card";
 import Header from "./components/Header";
@@ -31,6 +32,7 @@ function App() {
     fetchData();
   }, [date]);
 
+  // can also do a ternary, but if useState is set to {} that returns as true. Make sure to set to null or a diff falsey
   if (!data.url) {
     return <div className="loading">Loading...</div>;
   }

@@ -1,15 +1,33 @@
 import React from "react";
+import styled from "styled-components";
+import "./../App.css";
+
+const HeaderDiv = styled.div`
+  font-family: "Source Sans Pro", sans-serif;
+  color: white;
+  background-color: #919191;
+  margin-bottom: 20px;
+`;
+
+const Slogan = styled.div`
+  font-size: 2rem;
+  padding: 10px;
+`;
+
+const HeaderH1 = styled.h1`
+  font-size: 5rem;
+  margin-bottom: 0;
+`;
 
 const Header = () => {
   return (
-    <div className="header">
-      <h1>
+    <HeaderDiv>
+      <HeaderH1>
         {"{"} NASA A.P.O.D {"}"}
-      </h1>
-      <p className="slogan">
-        Get your daily dose of NASA's Astronomy Photo of the Day
-      </p>
-    </div>
+      </HeaderH1>
+      <Slogan>Get your daily dose of NASA's Astronomy Photo of the Day</Slogan>
+    </HeaderDiv>
   );
 };
+
 export default Header;
