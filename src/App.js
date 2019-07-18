@@ -14,8 +14,8 @@ function App() {
   const mm = String(today.getMonth() + 1).padStart(2, "0"); //January is 0!
   const yyyy = today.getFullYear();
   today = yyyy + "-" + mm + "-" + dd;
+  // console.log(today);
 
-  console.log(today);
   const [data, setData] = useState("");
   const [date, setDate] = useState(today);
 
