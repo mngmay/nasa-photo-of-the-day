@@ -9,8 +9,15 @@ import "semantic-ui-css/semantic.min.css";
 import "./App.css";
 
 function App() {
+  let today = new Date();
+  const dd = String(today.getDate()).padStart(2, "0");
+  const mm = String(today.getMonth() + 1).padStart(2, "0"); //January is 0!
+  const yyyy = today.getFullYear();
+  today = yyyy + "-" + mm + "-" + dd;
+
+  console.log(today);
   const [data, setData] = useState("");
-  const [date, setDate] = useState("2019-07-17");
+  const [date, setDate] = useState(today);
 
   const changeDate = event => {
     setDate(event.target.value);
@@ -36,7 +43,7 @@ function App() {
 
   // can also do a ternary, but if useState is set to {} that returns as true. Make sure to set to null or a diff falsey
 
-  if (!data.url) {
+  if (!data) {
     return <Loader />;
   }
 

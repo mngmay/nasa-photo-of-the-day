@@ -3,15 +3,15 @@ import styled from "styled-components";
 import "./../App.css";
 
 const HeaderDiv = styled.div`
-  font-family: "Source Sans Pro", sans-serif;
   color: white;
   background-color: #919191;
   margin-bottom: 20px;
+  font-family: "Source Sans Pro", sans-serif;
 `;
 
 const Slogan = styled.div`
   font-size: 2rem;
-  padding: 10px;
+  padding: 20px;
 `;
 
 const HeaderH1 = styled.h1`
