@@ -4,6 +4,8 @@ import axios from "axios";
 import Card from "./components/Card";
 import Header from "./components/Header";
 import DateDrop from "./components/DateDrop";
+import Loader from "./components/Loader";
+import "semantic-ui-css/semantic.min.css";
 import "./App.css";
 
 function App() {
@@ -33,8 +35,9 @@ function App() {
   }, [date]);
 
   // can also do a ternary, but if useState is set to {} that returns as true. Make sure to set to null or a diff falsey
+
   if (!data.url) {
-    return <div className="loading">Loading...</div>;
+    return <Loader />;
   }
 
   return (
