@@ -6,10 +6,16 @@ import "./../App.css";
 const CardDiv = styled.div`
   margin: 0 auto;
   width: 600px;
+  font-family: "Nanum Gothic", sans-serif;
 `;
 
 const CardTitle = styled.h1`
   margin: 20px;
+  font-family: "Nanum Gothic", sans-serif;
+`;
+
+const Media = styled.div`
+  margin: 20px 0;
 `;
 
 function Card(props) {
@@ -24,8 +30,8 @@ function Card(props) {
 
   return (
     <CardDiv>
-      {media()}
       <CardTitle>{data.title}</CardTitle>
+      <Media>{media()}</Media>
       <Container textAlign="justified">
         <strong>Date: {data.date}</strong>
         <Divider />

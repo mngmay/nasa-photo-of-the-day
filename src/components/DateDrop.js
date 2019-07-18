@@ -1,9 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 
+const CalDate = styled.div`
+  margin: 20px;
+  font-family: Courier;
+`;
+
 const DateDrop = ({ changeDate }) => {
   return (
-    <div className="date">
+    <CalDate>
       <form action="">
         <label>Select a date: </label>
         <input
@@ -13,7 +18,7 @@ const DateDrop = ({ changeDate }) => {
           className="cal-date"
         />
       </form>
-    </div>
+    </CalDate>
   );
 };
 

@@ -18,7 +18,7 @@ const Slogan = styled.div`
 const HeaderH1 = styled.h1`
   font-size: 5rem;
   margin-bottom: 0;
-  font-family: "Roboto", sans-serif;
+  font-family: "Nanum Gothic", sans-serif;
 `;
 
 const Header = () => {
