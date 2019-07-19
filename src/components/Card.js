@@ -5,12 +5,14 @@ import "./../App.css";
 
 const CardDiv = styled.div`
   margin: 0 auto;
-  width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60%;
   font-family: "Nanum Gothic", sans-serif;
 `;
 
 const CardTitle = styled.h1`
-  margin: 20px;
   font-family: "Nanum Gothic", sans-serif;
 `;
 

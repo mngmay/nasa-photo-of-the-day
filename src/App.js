@@ -8,6 +8,15 @@ import Loader from "./components/Loader";
 import "semantic-ui-css/semantic.min.css";
 import "./App.css";
 
+const AppDiv = styled.div`
+  width: 1000px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+`;
+
 function App() {
   let today = new Date();
   const dd = String(today.getDate()).padStart(2, "0");
@@ -48,12 +57,12 @@ function App() {
   }
 
   return (
-    <div className="App">
+    <AppDiv>
       <Header />
       <DateDrop changeDate={changeDate} />
       {/* {the left side variable is what is passed to DateDrop to connect} */}
       <Card data={data} />
-    </div>
+    </AppDiv>
   );
 }
 

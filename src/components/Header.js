@@ -7,6 +7,9 @@ const HeaderDiv = styled.div`
   background-color: #919191;
   margin: 20px 0;
   padding: 20px 0;
+  text-align: center;
+  border-radius: 50px;
+  margin: 0 auto;
 `;
 
 const Slogan = styled.div`
